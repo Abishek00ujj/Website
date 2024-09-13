@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* @media screen and (max-width:600px)
+        {
+            width: ;
+        } */
+        * {
+            background-color: #f9f9f9
+        }
+
+        @keyframes animate {
+            from {
+                transform: translate(-100%);
+            }
+
+            to {
+                transform: translate(0%);
+            }
+        }
+
+        .myform 
+        {
+            box-shadow:
+  0.3px 0.4px 2.7px rgb(76, 255, 79),
+  0.8px 1px 6.9px rgb(76, 255, 79),
+  1.6px 2.1px 14.2px rgb(76, 255, 79),
+  3.3px 4.4px 29.2px rgb(76, 255, 79),
+  9px 12px 80px rgb(76, 255, 79)
+;
+            display: flex;
+            justify-content: center;
+            border: 1px 2px solid;
+            width: 40vw;
+            height: 81vh;
+            margin: auto;
+            margin-top: 10vh;
+            background: transparent;
+            backdrop-filter: blur(80%);
+            color: #000000;
+            font-size: larger;
+            font-weight: 500;
+            font-family: cursive;
+            /* box-shadow: 5px 8px 10px rgb(76, 255, 79); */
+            animation: 0.5s animate ease;
+            backdrop-filter: blur(5px);
+            justify-content: center;
+            border-radius: 8px;
+            background-color: transparent;
+        }
+
+        form 
+        {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input 
+        {
+            border-color: rgb(0, 0, 0);
+            border-radius: 8px;
+            width: 25vw;
+            height: 5vh;
+            padding-bottom: 20px;
+            margin: 20px;
+            text-align: center;
+            color: #000000;
+            font-size: large;
+            font-weight: 600;
+        }
+
+        button 
+        {
+            color: #f9f9f9;
+            padding:10px;
+            border-radius: 20px;
+            background-color: #000000;
+            margin-left: auto;
+            margin-right: auto;
+            width: 20vw;
+            margin-bottom: 10vh;
+        }
+
+        label 
+        {
+            padding-top: 10px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="myform">
+        <form onsubmit="data(event)">
+            <h2>CONTACT FORM</h2>
+            <input type="text" id="Name" required placeholder="Enter your name" />
+            <input type="email" id="Email" required placeholder="Enter your email" />
+            <input type="password" id="current-password" required placeholder="Enter your password" />
+            <input type="tel" id="Number"required placeholder="Enter your number" />
+            <input type="number" id="age"required placeholder="Enter your age"/>
+            <button type="submit">Submit</button>
+        </form>
+       
+    </div>
+</body>
+<script>
+    const data=(e)=> {
+        e.preventDefault();
+        let name = document.getElementById("Name").value;
+        let email = document.getElementById("Email").value;
+        let password = document.getElementById("current-password").value;
+        let number = document.getElementById("Number").value;
+        const data={
+            username:name,
+            useremail:email,
+            userpassword:password,
+            usernumber:number
+        }
+        const {username,useremail,userpassword,usernumber}=data;
+        console.log(data)
+    }
+</script>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            pad
+        }
+        .container{
+            width: 33vw;
+            height: 33vh;
+            background-color: black;
+            display: grid;
+        }
+        .red{
+            background-color: red;
+            animation: 2s myanimations1 ease-in infinite;
+        }
+        .blue{
+            background-color: blue;
+            animation: 2s myanimations2 ease-in infinite;
+        }
+        .yellow{
+            background-color: yellow;
+            animation: 2s myanimations3 ease-in-out infinite;
+        }
+        @keyframes myanimations1 {
+            from{
+               transform: translate(-100%);
+               scale: 100%;
+            }
+            to{
+               transform: translate(100%);
+            }
+        }
+        @keyframes myanimations2{
+            from{
+               transform: translate(100%);
+            }
+            to{
+               transform: translate(-100%);
+            }
+        }
+        @keyframes myanimations3{
+            from{
+               transform: translate(-100%);
+            }
+            to{
+               transform: translate(100%);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="red container"></div>
+    <div class="blue container"></div>
+    <div class="yellow container"></div>
+</body>
+</html>
